@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html>
+    <title>assessment</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+
+        }
+        main {
+            display: grid;
+            grid-template-areas: 
+            "cln1 cln1"
+            "cln3 cln2"
+            "cln4 cln5"
+            "cln6 cln7"
+            "cln8 cln8"
+            "cln9 cln9"
+            "cln10 cln10";
+            grid-template-columns: 1fr 1fr;
+            padding: 1rem;
+            width: 100%;
+        }
+        .cln1 {
+            grid-area: cln1;
+            background-image: url(image-header.jpg);
+            background-position: center;
+            background-size: cover;
+            height: 100vh;
+            padding: 1rem;
+        }
+        header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 1rem 2rem;
+        }
+        .logo {
+            color: white;
+            font-size: 30px;
+        }
+        nav ul li {
+            display: inline-flex;
+        }
+        nav ul li a {
+            color: white;
+            display: block;
+            padding: 10px 20px;
+        }
+        nav ul li a:hover {
+            background-color: grey;
+            border-radius: 10px;
+        }
+        .cln1 h1 {
+            color: white;
+            text-align: center;
+            margin-top: 70px;
+            font-size: 70px;
+            letter-spacing: 10px;
+        }
+        .cln2 {
+            grid-area: cln2;
+        }
+        .cln2 img {
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+        }
+        .cln3 {
+            grid-area: cln3;
+            padding: 8rem;
+            justify-items: center;
+        }
+        .cln3 h1 {
+            text-align: center;
+            font-size: 45px;
+            font-weight: 70px;
+        }
+        .cln3 p {
+            font-size: 14px;
+            margin-top: 30px;
+            line-height: 40px;
+        }
+        .cln3 h3 {
+            font-weight: bolder;
+            margin-top: 30px;
+        }
+
+        .cln4 {
+            grid-area: cln4;
+        }
+        .cln4 img {
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+        }
+        .cln5 {
+            grid-area: cln5;
+            padding: 8rem;
+            justify-items: center;
+        }
+        .cln5 h1 {
+            font-size: 45px;
+            font-weight: 70px;
+            text-align: center;
+        }
+        .cln5 p {
+            font-size: 14px;
+            margin-top: 30px;
+            line-height: 40px;
+        }
+        .cln5 h3 {
+            font-weight: bolder;
+            margin-top: 30px;
+        }
+        .cln6 {
+            grid-area: cln6;
+            background-image: url(image-graphic-design.jpg);
+            background-position: center;
+            background-size: cover;
+            height: 100vh;
+            justify-items: center;
+            position: relative;
+        }
+        .cln6 h1 {
+            position: absolute;
+            bottom: 30%;
+            left: 35%;
+        }
+        .cln6 p {
+            position: absolute;
+            bottom: 18%;
+            left: 30%;
+            text-align: center;
+        }
+        .cln7 {
+            grid-area: cln7;
+            background-image: url(image-photography.jpg);
+            background-position: center;
+            background-size: cover;
+            height: 100vh;
+            justify-items: center;
+            position: relative;
+        }
+        .cln7 h1 {
+            position: absolute;
+            bottom: 30%;
+            left: 35%;
+        }
+        .cln7 p {
+            position: absolute;
+            bottom: 18%;
+            left: 30%;
+            text-align: center;
+        }
+        
+        .cln8 {
+            grid-area: cln8;
+            margin-top: 50px;
+        }
+        .cln8 h1 {
+            text-align: center;
+        }
+        .testimonies {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            margin-top: 30px;
+            padding: 2rem;
+        }
+        .test1 {
+            justify-items: center;
+        }
+        .test1 img {
+            border-radius: 100px;
+            width: 70px;
+        }
+        .test1 h6 {
+            font-size: 15px;
+            margin-top: 30px;
+        }
+        .test1 h3 {
+            margin-top: 50px;
+            font-weight: bolder;
+        }
+        .test1 p {
+            margin-top: 15px;
+            text-align: center;
+        }
+        .test2 {
+            justify-items: center;
+        }
+        .test2 img {
+            border-radius: 100px;
+            width: 70px;
+        }
+        .test2 h6 {
+            font-size: 15px;
+            margin-top: 30px;
+        }
+        .test2 h3 {
+            margin-top: 50px;
+            font-weight: bolder;
+        }
+        .test2 p{
+            text-align: center;
+            margin-top: 15px;
+        }
+        .test3 {
+            justify-items: center;
+        }
+        .test3 img {
+            border-radius: 100px;
+            width: 70px;
+        }
+        .test3 h6 {
+            font-size: 15px;
+            margin-top: 30px;
+        }
+        .test3 p {
+            margin-top: 15px;
+            text-align: center;
+        }
+        .test3 h3 {
+            margin-top: 50px;
+            font-weight: bolder;
+        }
+        .cln9 {
+            grid-area: cln9;
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+            margin-top: 50px;
+        }
+        .inside {
+            width: 100%;
+            height: 100%;
+        }
+        .inside img {
+            width: 100%;
+            height: 100%;
+        }
+        .cln10 {
+            grid-area: cln10;
+            padding: 2rem;
+            justify-items: center;
+            background-color: aqua;
+        }
+        .cln10 h1 {
+            font-weight: 50px;
+        }
+        .cln10 p {
+            margin-top: 30px;
+            word-spacing: 70px;
+        }
+        .icon {
+            margin-top: 50px;
+        }
+        .icon img {
+            padding: 10px;
+        }
+        @media(max-width: 480px) {
+            main {
+                grid-template-columns: 1fr;
+                grid-template-areas: 
+                "cln1"
+                "cln2"
+                "cln3"
+                "cln4"
+                "cln5"
+                "cln6"
+                "cln7"
+                "cln8"
+                "cln9"
+                "cln10";
+            }
+            .header {
+                display: none;
+            }
+            .testimonies {
+                grid-template-columns: 1fr;
+                grid-template-areas: 
+                "test1"
+                "test2"
+                "test3"
+                "test4";
+            }
+            .cln9 {
+                grid-template-columns: 1fr 1fr;
+            }
+            
+        }
+    </style>
+    <body>
+        <main class="container">
+            <div class="cln1">
+                <header>
+                    <div class="logo">
+                        <h2>sunnyside</h2>
+                    </div>
+                    <nav>
+                        <ul>
+                            <li><a href="#">About</a></li>
+                            <li><a href="#">Service</a></li>
+                            <li><a href="#">Project</a></li>
+                            <li><a href="#">Contact</a></li>
+                        </ul>
+                    </nav>
+                </header>
+                <h1>WE ARE CREATIVE</h1>
+            </div>
+            <div class="cln2">
+                <img src="image-transform.jpg">
+            </div>
+            <div class="cln3">
+                <h1>Transform your brand</h1>
+                <p>We are are a full-service creative specializing in helping brands grow fast. Engage your clients through compelling visuals that do most of the marketing for you </p>
+                <h3>LEARN MORE</h3>
+            </div>
+            <div class="cln4">
+                <img src="image-stand-out.jpg">
+            </div>
+            <div class="cln5">
+                <h1>Stand out to the right audience</h1>
+                <p>Using a collaborative formula of designers, researchers, photographers, videographers, and copywriters, we'll build and extend your brand in digital places</p>
+                <h3>LEARN MORE</h3>
+            </div>
+            <div class="cln6">
+                <h1>Graphic design</h1>
+                <p>Great design makes you memorable. We deliver<br> artwork that underscores your brang message<br>and captures potential clients attention.</p>
+            </div>
+            <div class="cln7">
+                <h1>Photograpy</h1>
+                <p>increase your credibility by getting the most<br>stunning, high-quality photos that improve your<br>business image.</p>
+            </div>
+            <div class="cln8">
+                <h4>CLIENT TESTIMONIES</h4>
+                <div class="testimonies">
+                    <div class="test1">
+                        <img src="image-emily.jpg">
+                        <h6>We put our trust in sunnyside and they<br>delivered, making sur our needs were<br>met and deadlines were always hit. </h6>
+                        <h3>Emily R</h3>
+                        <p>Marketing Director</p>
+                    </div>
+                    <div class="test2">
+                        <img src="image-thomas.jpg">
+                        <h6>sunnyside's enthusiasm coupled with<br>their keen interest in our brand's success<br>made it satisfying and enjoyable<br>experience.</h6>
+                        <h3>Thomas S.</h3>
+                        <p>Chief Operating Officer</p>
+                    </div>
+                    <div class="test3">
+                        <img src="image-jennie.jpg">
+                        <h6>Incredible end result! Our sales increased<br>over 400% when we worked with <br>Sunnyside. Highly recommended!</h6>
+                        <h3>Jennie F.</h3>
+                        <p>Business owner</p>
+                    </div>
+                </div>
+            </div>
+            <div class="cln9">
+                <div class="inside">
+                    <img src="image-gallery-milkbottles.jpg">
+                </div>
+                <div class="inside">
+                    <img src="image-gallery-orange.jpg">
+                </div>
+                <div class="inside">
+                    <img src="image-gallery-cone.jpg">
+                </div>
+                <div class="inside">
+                    <img src="image-gallery-sugarcubes.jpg">
+                </div>
+            </div>
+            <div class="cln10">
+                <h1>sunnyside</h1>
+                <p>About Services Project</p>
+                <div class="icon">
+                    <img src="icon-facebook.svg">
+                    <img src="icon-instagram.svg">
+                    <img src="icon-twitter.svg">
+                    <img src="icon-pinterest.svg">
+                </div>
+            </div>
+          
+        </main>
+    </body>
+</html>
